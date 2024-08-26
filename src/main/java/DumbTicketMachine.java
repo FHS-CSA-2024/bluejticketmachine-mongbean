@@ -8,7 +8,7 @@ package src.main.java;
  * to insert enough money before trying to print a ticket.
  * It also assumes that users enter sensible amounts.
  *
- * @author David J. Barnes and Michael Kölling
+ * @author David J. Barnes and Michael KÃ¶lling
  * @version 2016.02.29
  */
 public class DumbTicketMachine
@@ -28,6 +28,11 @@ public class DumbTicketMachine
     public DumbTicketMachine(int cost)
     {
         price = cost;
+        balance = 0;
+        total = 0;
+    }
+    public DumbTicketMachine(){
+        price = 10;
         balance = 0;
         total = 0;
     }
@@ -56,7 +61,12 @@ public class DumbTicketMachine
     {
         balance = balance + amount;
     }
-
+    public void emptyMachine(){
+        total = 0;
+    }
+    public int getTotal(){
+        return total;
+    }    
     /**
      * Print a ticket.
      * Update the total collected and
