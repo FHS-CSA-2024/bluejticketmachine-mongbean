@@ -8,7 +8,7 @@ package src.main.java;
  * sensible amounts of money, and will only print a ticket
  * if enough money has been input.
  * 
- * @author David J. Barnes and Michael Kölling
+ * @author David J. Barnes and Michael KÃ¶lling
  * @version 2016.02.29
  */
 public class SmarterTicketMachine
@@ -61,7 +61,11 @@ public class SmarterTicketMachine
                                amount);
         }
     }
-
+    public int emptyMachine(){
+        int returnAmount = total;
+        total = 0;
+        return returnAmount;
+    }
     /**
      * Print a ticket if enough money has been inserted, and
      * reduce the current balance by the ticket price. Print
